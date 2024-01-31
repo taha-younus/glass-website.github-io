@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    color: #426696;
+    font-weight: 600;
+    font-size: 3rem;
+    opacity: 0.8;
+}
+
+h2,p{
+    color: #688ec6;
+    font-weight: 500;
+    opacity: 0.8;
+    font-size: 1.5em;
+}
+
+h3{
+    color: #426696;
+    font-weight: 600;
+    opacity: 0.8;
+}
+main{
+    font-family:'Poppins',sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(to right top, #36ffda, #01e1ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.glass{
+    background-color: rgba(255, 255, 255, 0.437);
+    min-height: 80vh;
+    width: 60vw;
+    background: linear-gradient(
+        to right bottom,
+     rgba(255,255,255,0.7),
+     rgba(255,255,255,0.3));
+     border-radius: 1rem;
+     z-index: 5;
+     backdrop-filter:blur(1rem);
+     display: flex;
+    transform: translateY(10%);
+     animation: reload .5s linear forwards;
+     opacity: 0;
+}
+
+@keyframes reload {
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.circle1,.circle2{
+    background-color: white;
+    background: linear-gradient(
+        to right bottom,
+     rgba(255,255,255,0.8),
+     rgba(255,255,255,0.3));
+     height: 15rem;
+     width: 15rem;
+     position: absolute;
+     z-index: 2;
+     border-radius: 50%;
+     
+}
+
+.circle1{
+    top: 5%;
+    right: 15%;
+    
+}
+
+.circle2{
+    bottom: 5%;
+    left: 15%;
+}
+
+.dashboard{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background: linear-gradient(
+        to right bottom,
+     rgba(255,255,255,0.7),
+     rgba(255,255,255,0.3));
+     border-radius: 2rem;
+}
+
+.link{
+    display: flex;
+    margin: 2rem 0rem;
+    padding: 1rem 5rem;
+    align-items: center;
+    border: 1px solid red;
+}
+.link h2{
+    padding: 0rem 2rem;
+}
+.games{
+    flex: 3;
+}
+
+.pro{
+    background: linear-gradient(to right top, #00ffd0, #00e1ff);
+    border-radius: 2rem;
+    color: white;
+    padding: 1rem;
+    position: relative;
+}
+
+.pro img{
+    position: absolute;
+    top: -10%;
+    right: 10%;
+}
+
+.pro h2{
+    width: 40%;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    /* text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.488); */
+}
+
+/* Games Section */
+
+.status{
+    margin-bottom:3rem;
+}
+
+.status input{
+    background: linear-gradient(
+        to right bottom,
+     rgba(255,255,255,0.7),
+     rgba(255,255,255,0.3));
+     border: none;
+     width: 50%;
+     padding: 0.8rem;
+     border-radius: 2rem;
+     cursor: inherit;
+}
+
+.games{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 5rem;
+}
+
+.card{
+    display: flex;
+    background: linear-gradient(
+        to left top,
+        rgba(255,255,255,0.8),
+        rgba(255,255,255,0.9)
+        );
+        border-radius: 1rem;
+        margin: 2rem 0rem;
+        padding: 2rem;
+        box-shadow:6px 6px 20px rgba(122,122,122,0.215);
+        justify-content: space-between;
+        cursor: pointer;
+        perspective: 200px;
+        transition: all .6s ease;
+
+}
+
+.card:hover{
+    transform: translatex(50px);
+}
+
+.card > .percentage,h2,p{
+    cursor: text;
+}
+
+.progress{
+    background:  linear-gradient(to right top, #8bffea, #45e9ff);
+    width: 100%;
+    height: 25%;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgb(236,236,236);
+    position: absolute;
+    left:   60%;
+
+}
+
+.card-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.percentage{
+    font-weight: bold;
+    background:  linear-gradient(to right top, #00b392, #009aae);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
